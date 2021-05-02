@@ -1,14 +1,12 @@
-package seckill.entity;
+package com.xiaoyan.eurekaclient.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "success_killed")
+@IdClass(SuccessKilled.class)  //不加这个报这个错 does not define an IdClass
 public class SuccessKilled implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id

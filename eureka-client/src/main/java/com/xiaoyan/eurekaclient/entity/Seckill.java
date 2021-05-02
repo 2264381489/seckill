@@ -1,12 +1,17 @@
-package seckill.entity;
+package com.xiaoyan.eurekaclient.entity;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "seckill")
-public class seckill implements Serializable {
+public class Seckill implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,8 +24,4 @@ public class seckill implements Serializable {
     private Timestamp createTime;
     @Version
     private int version;
-
-
-
-
 }
